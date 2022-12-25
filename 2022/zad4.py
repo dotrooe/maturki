@@ -1,5 +1,5 @@
 def main():
-	arr = [x for x in open('liczby.txt', 'r').read().strip().split('\n')]
+	arr = [x for x in open('Dane_2205/liczby.txt', 'r').read().strip().split('\n')]
 #	answers:
 #	zad1: (18, 93639)
 #	zad2: (99792, 10), (62790, 6)
