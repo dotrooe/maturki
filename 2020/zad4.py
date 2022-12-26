@@ -16,11 +16,12 @@ def goldbach(arr:list):
             skladniki.append(i)
         wszystkie_skl.append(skladniki)
         wszystkie_pary = []
+    # print(wszystkie_skl)
     for el in wszystkie_skl:
         para_liczb = [el[0], 0, 0]
         # print(para_liczb)
         for i in range(len(el)):
-            if is_prime(el[i]) and el[i] % 2 != 0:
+            if is_prime(el[i]):
                 j = el[0] - el[i]
                 if is_prime(j):
                     # print(el[i], j)
@@ -87,7 +88,6 @@ def goldbach(arr:list):
 
 
     return f'wszystkie pary(zad1) to: {wszystkie_pary}, a wszystkie ciągi liter(zad2) to: {all_streaks}, a najmniejsza para(zad3) to: {smallest_pair}'
-            
 
 def is_prime(x):
     if x > 1:
