@@ -10,7 +10,7 @@ def mecz(file):
     current_passa_team = ''
     best_passa_team = ''
     passa_count = 0
-    for i in range(len(file) - 1):
+    for i in range(len(file)):
         if file[i] != file[i - 1]:
             different_winners += 1
             if current_passa >= 10:
@@ -36,9 +36,10 @@ def mecz(file):
             current_winner = 'B'
             if abs(a_wins - b_wins) > 3 and b_wins >= 1000:
                 break
-    return f'odp zad1: 5029, zad2: {a_wins, b_wins, current_winner} zad3: {passa_count, best_passa + 1, best_passa_team}'
+    return f'odp zad1: {different_winners}, zad2: {a_wins, b_wins, current_winner} zad3: {passa_count, best_passa + 1, best_passa_team}'
 
 
 
 if __name__ == '__main__':
     main()
+    
